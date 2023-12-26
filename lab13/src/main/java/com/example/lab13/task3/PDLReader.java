@@ -22,7 +22,8 @@ public class PDLReader
         company.setName(title.text());
 
         String logo = document.select("link[rel$=icon]").attr("href");
-        if (logo.startsWith("/")) {
+        if (logo.startsWith("/"))
+        {
             logo = url + logo;
         }
         company.setLogoUrl(logo);
